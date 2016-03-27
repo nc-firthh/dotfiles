@@ -4,27 +4,6 @@ echo "Loading ~/.bash_profile a shell script that runs in every new terminal you
 # $VARIABLE will render before the rest of the command is executed
 echo "Logged in as $USER at $(hostname)"
 
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-# Path for RVM
-test -d $HOME/.rvm/bin && PATH=$PATH:$HOME/.rvm/bin
-
-# Rbenv autocomplete and shims
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-# Path for RBENV
-test -d $HOME/.rbenv/ && PATH="$HOME/.rbenv/bin:$PATH"
-
-# Path changes are made non-destructive with PATH=new_path;$PATH   This is like A=A+B so we preserve the old path
-
-# Path order matters, putting /usr/local/bin: before $PATH
-# ensures brew programs will be seen and used before another program
-# of the same name is called
-
-# Path for brew
-test -d /usr/local/bin && export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
-# Path for Heroku
-test -d /usr/local/heroku/ && export PATH="/usr/local/heroku/bin:$PATH"
-
 # Load git completions
 git_completion_script=/usr/local/etc/bash_completion.d/git-completion.bash
 test -s $git_completion_script && source $git_completion_script
@@ -41,8 +20,6 @@ c_git_dirty='\[\e[0;31m\]'
 
 # PS1 is the variable for the prompt you see everytime you hit enter
 PROMPT_COMMAND='PS1="${c_path}\W${c_reset}$(git_prompt) :> "'
-
-export PS1='\n\[\033[0;31m\]\W\[\033[0m\]$(git_prompt)\[\033[0m\]:> '
 
 # determines if the git branch you are on is clean or dirty
 git_prompt ()
@@ -73,14 +50,7 @@ export GREP_OPTIONS='--color=always'
 # Set sublime as the default editor
 which -s subl && export EDITOR="subl --wait"
 
-# Useful aliases
+eval "$(rbenv init -)"
 
-alias e=subl
-alias be="bundle exec"
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-
-### Add coffeescript plguin for sublime
-export PATH="/usr/local/bin/coffee:$PATH"
+alias be='bundle exec'
+alias gs='git status'
