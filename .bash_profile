@@ -15,11 +15,11 @@ c_reset='\[\e[0m\]'
 c_path='\[\e[0;31m\]'
 # \e[0;32m\ sets the color to green
 c_git_clean='\[\e[0;34m\]'
-# \e[0;31m\ sets the color to red
-c_git_dirty='\[\e[0;31m\]'
+# \e[0;31m\ sets the color to yellow
+c_git_dirty='\[\e[0;33m\]'
 
 # PS1 is the variable for the prompt you see everytime you hit enter
-PROMPT_COMMAND='PS1="${c_path}\W${c_reset}$(git_prompt) :> "'
+PROMPT_COMMAND='PS1="${c_path}\W${c_reset}$(git_prompt) \[\e[0;37m\]➜ \[\e[0;32m\] "'
 
 # determines if the git branch you are on is clean or dirty
 git_prompt ()
@@ -35,12 +35,13 @@ git_prompt ()
   else
     git_color=${c_git_dirty}
   fi
-  echo " [$git_color$git_branch${c_reset}]"
+  echo " $git_color[$git_color$git_branch${c_reset}$git_color]"
 }
 
 # Colors ls should use for folders, files, symlinks etc, see `man ls` and
 # search for LSCOLORS
 export LSCOLORS=ExGxFxdxCxDxDxaccxaeex
+
 # Force ls to use colors (G) and use humanized file sizes (h)
 alias ls='ls -Gh'
 
@@ -54,3 +55,4 @@ eval "$(rbenv init -)"
 
 alias be='bundle exec'
 alias gs='git status'
+alias gd='git diff'
