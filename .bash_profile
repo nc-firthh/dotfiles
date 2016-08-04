@@ -56,3 +56,6 @@ eval "$(rbenv init -)"
 alias be='bundle exec'
 alias gs='git status'
 alias gd='git diff'
+alias gl='git log'
+alias ga='git add'
+alias gc='git commit'
