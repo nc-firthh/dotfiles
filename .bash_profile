@@ -4,10 +4,6 @@ echo "Loading ~/.bash_profile a shell script that runs in every new terminal you
 # $VARIABLE will render before the rest of the command is executed
 echo "Logged in as $USER at $(hostname)"
 
-# Load git completions
-git_completion_script=/usr/local/etc/bash_completion.d/git-completion.bash
-test -s $git_completion_script && source $git_completion_script
-
 # A more colorful prompt
 # \[\e[0m\] resets the color to default color
 c_reset='\[\e[0m\]'
@@ -53,11 +49,25 @@ which -s subl && export EDITOR="subl --wait"
 
 eval "$(rbenv init -)"
 
-alias be='bundle exec'
+# Git branch bash completion
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+  
+  # Add git completion to aliases
+  __git_complete co _git_checkout
+  __git_complete gm __git_merge
+  __git_complete gp _git_pull
+fi
+
+alias co="git checkout"
+alias gm="git merge"
+alias gp="git pull"
+
 alias gs='git status'
 alias gd='git diff'
 alias gl='git log'
 alias ga='git add'
 alias gc='git commit'
 alias ba='git branch -a'
-alias co='git checkout'
+
+alias be='bundle exec'
