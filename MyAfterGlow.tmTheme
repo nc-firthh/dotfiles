@@ -188,6 +188,19 @@
     </dict>
     <dict>
       <key>name</key>
+      <string>String (Keys)</string>
+      <key>scope</key>
+      <string>string.unquoted</string>
+      <key>settings</key>
+      <dict>
+        <key>fontStyle</key>
+        <string></string>
+        <key>foreground</key>
+        <string>#FFA1B1</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
       <string>Library function</string>
       <key>scope</key>
       <string>support.function</string>
