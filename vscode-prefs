@@ -1,0 +1,82 @@
+{
+    "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 12,
+    "editor.renderWhitespace": "boundary",
+    "editor.tabSize": 2,
+    "editor.tokenColorCustomizations": {
+        "[Cobalt2]": {
+            "textMateRules": [{
+                "name": "JSON Key - Level 0",
+                "scope": [
+                    "source.json meta.structure.dictionary.json support.type.property-name.json"
+                ],
+                "settings": {
+                    "foreground": "#ff628c"
+                }
+            }, {
+                "name": "JSON Key - Level 1",
+                "scope": [
+                    "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+                ],
+                "settings": {
+                    "foreground": "#ffc600"
+                }
+            }, {
+                "name": "JSON Key - Level 2",
+                "scope": [
+                    "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+                ],
+                "settings": {
+                    "foreground": "#5ed1d3"
+                }
+            }, {
+                "name": "JSON Key - Level 3",
+                "scope": [
+                    "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+                ],
+                "settings": {
+                    "foreground": "#fb94ff"
+                }
+            }, {
+                "name": "JSON Key - Level 4",
+                "scope": [
+                    "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+                ],
+                "settings": {
+                    "foreground": "#ff9d00"
+                }
+            }, {
+                "name": "JSON Key - Level 5",
+                "scope": [
+                    "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+                ],
+                "settings": {
+                    "foreground": "#a5ff90"
+                }
+            }]
+        },
+    },
+    "explorer.autoReveal": false,
+    "files.insertFinalNewline": true,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "terminal.integrated.fontFamily": "Source Code Pro",
+    "gitlens.advanced.messages": {
+        "suppressLineUncommittedWarning": true,
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.historyExplorer.enabled": true,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.statusBar.alignment": "left",
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Cobalt2",
+    "workbench.colorCustomizations": {
+        "scrollbar.shadow": "#ffffff00",
+        "widget.shadow": "#ffffff00"
+    },
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.sideBar.location": "left",
+    "extensions.ignoreRecommendations": true,
+}
