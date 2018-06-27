@@ -54,6 +54,54 @@
                 "settings": {
                     "foreground": "#a5ff90"
                 }
+            }, {
+                "name": "JSON Key - Level 6",
+                "scope": [
+                    "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+                ],
+                "settings": {
+                    "foreground": "#ff628c"
+                }
+            }, {
+                "name": "JSON Key - Level 7",
+                "scope": [
+                    "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name.json"
+                ],
+                "settings": {
+                    "foreground": "#ffc600"
+                }
+            }, {
+                "name": "JSON Key - Level 8",
+                "scope": [
+                    "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name.json"
+                ],
+                "settings": {
+                    "foreground": "#5ed1d3"
+                }
+            }, {
+                "name": "JSON Key - Level 9",
+                "scope": [
+                    "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name.json"
+                ],
+                "settings": {
+                    "foreground": "#fb94ff"
+                }
+            }, {
+                "name": "JSON Key - Level 10",
+                "scope": [
+                    "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name.json"
+                ],
+                "settings": {
+                    "foreground": "#ff9d00"
+                }
+            }, {
+                "name": "JSON Key - Level 11",
+                "scope": [
+                    "source.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json meta.structure.dictionary.json support.type.property-name.json"
+                ],
+                "settings": {
+                    "foreground": "#a5ff90"
+                }
             }]
         },
     },
@@ -79,4 +127,5 @@
     "workbench.iconTheme": "vscode-icons",
     "workbench.sideBar.location": "left",
     "extensions.ignoreRecommendations": true,
+    "git.enableSmartCommit": true,
 }
