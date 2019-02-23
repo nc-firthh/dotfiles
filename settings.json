@@ -1,0 +1,88 @@
+// Visual Studio Code Settings
+{
+    "editor.fontFamily": "'FiraCode+ Inconsolata', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.matchBrackets": false,
+    "editor.renderWhitespace": "boundary",
+    "editor.tabSize": 2,
+    "[elm]": {
+        "editor.formatOnSave": true,
+        "editor.tabSize": 4,
+        "editor.useTabStops": true
+    },
+    "explorer.autoReveal": false,
+    "extensions.ignoreRecommendations": true,
+    "files.insertFinalNewline": true,
+    "git.enableSmartCommit": true,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "macros": {
+        "saveAndVimExit": [
+            "workbench.action.files.save",
+            "extension.vim_escape"
+        ]
+    },
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.fontFamily": "'FiraCode+ Inconsolata'",
+    "window.zoomLevel": 1,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#C1666B",
+        "statusBar.noFolderBackground": "#C1666B",
+        "statusBar.debuggingBackground": "#C1666B",
+        "statusBar.foreground": "#EEE"
+    },
+    "workbench.iconTheme": "vs-nomo-dark",
+    "workbench.colorTheme": "Noctis Minimus",
+    "workbench.sideBar.location": "left",
+    "vim.statusBarColorControl": true,
+    "vim.statusBarColors": {
+        "normal": [
+            "#345995",
+            "#EEE"
+        ],
+        "insert": [
+            "#48A9A6",
+            "#EEE"
+        ],
+        "replace": [
+            "#DD6E42",
+            "#EEE"
+        ],
+        "visual": [
+            "#C1666B",
+            "#EEE"
+        ],
+        "visualblock": [
+            "#C1666B",
+            "#EEE"
+        ],
+        "visualline": [
+            "#C1666B",
+            "#EEE"
+        ],
+        "searchinprogressmode": [
+            "#303633",
+            "#EEE"
+        ],
+        "commandlineinprogress": [
+            "#303633",
+            "#EEE"
+        ],
+        "easymotionmode": [
+            "#345995",
+            "#EEE"
+        ],
+        "easymotioninputmode": [
+            "#345995",
+            "#EEE"
+        ],
+        "surroundinputmode": [
+            "#345995",
+            "#EEE"
+        ]
+    }
+}
