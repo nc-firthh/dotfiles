@@ -1,6 +1,3 @@
-# System-specific config
-source ~/.profile
-
 # Default search override
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 
@@ -99,3 +96,6 @@ gfix() {
   git commit --fixup="$1"
   git rebase --interactive --autosquash "$1"^
 }
+
+# System-specific config
+source ~/.profile
