@@ -35,7 +35,6 @@
         "statusBar.debuggingBackground": "#C1666B",
         "statusBar.foreground": "#EEE"
     },
-    "workbench.iconTheme": "vscode-seedling-icon-theme",
     "workbench.colorTheme": "Noctis Minimus",
     "workbench.sideBar.location": "left",
     "vim.statusBarColorControl": true,
