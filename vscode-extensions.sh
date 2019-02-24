@@ -4,7 +4,6 @@ code --install-extension geddski.macros
 code --install-extension liviuschera.noctis
 code --install-extension mgmcdermott.vscode-language-babel
 code --install-extension mjmcloug.vscode-elixir
-code --install-extension rastikerdar.vscode-seedling-icon-theme
 code --install-extension sbrink.elm
 code --install-extension shardulm94.trailing-spaces
 code --install-extension vscodevim.vim

@@ -97,5 +97,8 @@ gfix() {
   git rebase --interactive --autosquash "$1"^
 }
 
+# Get installed vscode extensions
+alias vscode-extensions="code --list-extensions | xargs -L 1 echo code --install-extension"
+
 # System-specific config
 source ~/.profile
