@@ -2,7 +2,7 @@
 
 My simple environment configuration files for zsh, vim, and vscode.
 
-## Installation   
+## Installation
 
 ### VSCode Settings
 
