@@ -1,33 +1,11 @@
 # dotfiles
 
-My simple environment configuration files for zsh, vim, and vscode.
+My simple environment configuration files for zsh, nvim, and git.
 
 ## Installation
 
-### VSCode Settings
-
-#### MacOS
+On a Unix-based system, run the setup script to set up symbolic links for the included dotfiles:
 
 ```bash
-cp ./settings.json ~/Library/Application Support/Code/User/settings.json
+$ zsh setup.sh
 ```
-
-#### Windows
-
-**TODO**
-
-#### Linux
-
-**TODO**
-
-### VSCode Extensions
-
-#### MacOS & Linux
-
-```bash
-bash vscode-extensions.sh
-```
-
-#### Windows
-
-**TODO**
