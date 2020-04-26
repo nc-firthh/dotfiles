@@ -1,10 +1,15 @@
 #!/bin/zsh
 
-# Symlink .zshrc
+# Set up symlinks for the included dotfiles
+
+# ZSH
 ln -s $PWD/zsh/zshrc ~/.zshrc
 
+# Git
+ln -s $PWD/git/gitconfig ~/.gitconfig
+
 if command -v nvim > /dev/null 2>&1; then
-  # Symlink nvim configs
+  # Neovim
   ln -s $PWD/nvim/init.vim ~/.config/nvim/init.vim
   ln -s $PWD/nvim/plugins.vim ~/.config/nvim/plugins.vim
 else
