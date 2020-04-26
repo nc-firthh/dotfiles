@@ -21,7 +21,7 @@ gfix() {
 alias vscode-extensions="code --list-extensions | xargs -L 1 echo code --install-extension"
 
 # Conditinally set nvim aliases
-if command -v nvim > /dev/null 2>&1; then
+if command -v /usr/local/bin/nvim > /dev/null 2>&1; then
   # Remap to nvim
   alias vi="nvim"
   alias vim="nvim"
