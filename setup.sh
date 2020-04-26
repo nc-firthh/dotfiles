@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Symlink .zshrc
-ln -s $PWD/zsh/.zshrc ~/.zshrc
+ln -s $PWD/zsh/zshrc ~/.zshrc
 
 if command -v nvim > /dev/null 2>&1; then
   # Symlink nvim configs
