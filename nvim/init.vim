@@ -10,6 +10,10 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 
+" Show whitespace characters
+set list listchars=tab:<=>,trail:·
+
+
 " ============================================================================ "
 " ===                           PLUGIN SETUP                               === "
 " ============================================================================ "
