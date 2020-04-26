@@ -13,6 +13,8 @@ set softtabstop=2
 " Show whitespace characters
 set list listchars=tab:<=>,trail:·
 
+" Show line numbers
+set number
 
 " ============================================================================ "
 " ===                           PLUGIN SETUP                               === "
