@@ -47,12 +47,22 @@ set statusline=
   set statusline+=\ %c:%l/%L
   set statusline+=\ [%p%%]
 
+" Custom netrw (file explorer) config
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_winsize = 25
+let g:netrw_browse_split = 4
+
+
 " ============================================================================ "
 " ===                           KEY MAPPINGS                               === "
 " ============================================================================ "
 
 " Reload vim config
-map <C-s> :source ~/.config/nvim/init.vim
+map <C-s> :source ~/.config/nvim/init.vim<CR>
+
+" Open file explorer
+noremap  <C-B> :Vexplore<CR>
 
 " ============================================================================ "
 " ===                           PLUGIN SETUP                               === "
