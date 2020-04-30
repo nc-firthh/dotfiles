@@ -14,12 +14,18 @@ if !filereadable(plugpath)
     endif
 endif
 
-" ============================================================================ "
-" ===                               PLUGINS                                === "
-" ============================================================================ "
+
+
+" Actual Plugins
 call plug#begin('~/.config/nvim/plugged')
 
-" Elixir support
+" Tools
+Plug 'airblade/vim-gitgutter'
+
+" Syntax
 Plug 'elixir-editors/vim-elixir'
+
+" Color Schemes
+Plug 'morhetz/gruvbox'
 
 call plug#end()
