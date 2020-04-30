@@ -15,16 +15,24 @@ function move(x, y, w, h)
   win:setFrame(f)
 end
 
-function maximize()   move(0, 0, 1, 1) end
-function leftHalf()   move(0, 0, 0.5, 1) end
-function rightHalf()  move(0.5, 0, 0.5, 1) end
-function topHalf()    move(0, 0, 1, 0.5) end
-function bottomHalf() move(0, 0.5, 1, 0.5) end
+function maximize()        move(0, 0, 1, 1) end
+function topHalf()         move(0, 0, 1, 0.5) end
+function leftHalf()        move(0, 0, 0.5, 1) end
+function rightHalf()       move(0.5, 0, 0.5, 1) end
+function bottomHalf()      move(0, 0.5, 1, 0.5) end
+function topLeftHalf()     move(0, 0, 0.5, 0.5) end
+function topRightHalf()    move(0.5, 0, 0.5, 0.5) end
+function bottomRightHalf() move(0.5, 0.5, 0.5, 0.5) end
+function bottomLeftHalf()  move(0, 0.5, 0.5, 0.5) end
 
 hs.hotkey.bind(mash, "Left", leftHalf)
 hs.hotkey.bind(mash, "Right", rightHalf)
 hs.hotkey.bind(mash, "Up", topHalf)
 hs.hotkey.bind(mash, "Down", bottomHalf)
+hs.hotkey.bind(mash, "1", topLeftHalf)
+hs.hotkey.bind(mash, "2", topRightHalf)
+hs.hotkey.bind(mash, "3", bottomRightHalf)
+hs.hotkey.bind(mash, "4", bottomLeftHalf)
 hs.hotkey.bind(mash, "M", maximize)
 
 hs.window.animationDuration = 0 -- disable animations
