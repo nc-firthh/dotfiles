@@ -17,26 +17,34 @@ function move(x, y, w, h, p)
   win:setFrame(f)
 end
 
-function center()          move(0, 0, 1, 1, 42) end
-function maximize()        move(0, 0, 1, 1) end
-function topHalf()         move(0, 0, 1, 0.5) end
-function leftHalf()        move(0, 0, 0.5, 1) end
-function rightHalf()       move(0.5, 0, 0.5, 1) end
-function bottomHalf()      move(0, 0.5, 1, 0.5) end
-function topLeftHalf()     move(0, 0, 0.5, 0.5) end
-function topRightHalf()    move(0.5, 0, 0.5, 0.5) end
-function bottomRightHalf() move(0.5, 0.5, 0.5, 0.5) end
-function bottomLeftHalf()  move(0, 0.5, 0.5, 0.5) end
+function center()        move(0, 0, 1, 1, 42) end
+function fill()          move(0, 0, 1, 1) end
+function top50()         move(0, 0, 1, 0.5) end
+function left60()        move(0, 0, 0.6, 1) end
+function left50()        move(0, 0, 0.5, 1) end
+function left40()        move(0, 0, 0.4, 1) end
+function right60()       move(0.4, 0, 0.6, 1) end
+function right50()       move(0.5, 0, 0.5, 1) end
+function right40()       move(0.6, 0, 0.4, 1) end
+function bottom50()      move(0, 0.5, 1, 0.5) end
+function topLeft50()     move(0, 0, 0.5, 0.5) end
+function topRight50()    move(0.5, 0, 0.5, 0.5) end
+function bottomLeft50()  move(0, 0.5, 0.5, 0.5) end
+function bottomRight50() move(0.5, 0.5, 0.5, 0.5) end
 
 hs.hotkey.bind(mash, "C", center)
-hs.hotkey.bind(mash, "M", maximize)
-hs.hotkey.bind(mash, "K", topHalf)
-hs.hotkey.bind(mash, "H", leftHalf)
-hs.hotkey.bind(mash, "L", rightHalf)
-hs.hotkey.bind(mash, "J", bottomHalf)
-hs.hotkey.bind(mash, "1", topLeftHalf)
-hs.hotkey.bind(mash, "2", topRightHalf)
-hs.hotkey.bind(mash, "3", bottomRightHalf)
-hs.hotkey.bind(mash, "4", bottomLeftHalf)
+hs.hotkey.bind(mash, "F", fill)
+hs.hotkey.bind(mash, "K", top50)
+hs.hotkey.bind(mash, "N", left40)
+hs.hotkey.bind(mash, "H", left50)
+hs.hotkey.bind(mash, "U", left60)
+hs.hotkey.bind(mash, "I", right40)
+hs.hotkey.bind(mash, "L", right50)
+hs.hotkey.bind(mash, "M", right60)
+hs.hotkey.bind(mash, "J", bottom50)
+hs.hotkey.bind(mash, "1", topLeft50)
+hs.hotkey.bind(mash, "2", topRight50)
+hs.hotkey.bind(mash, "3", bottomRight50)
+hs.hotkey.bind(mash, "4", bottomLeft50)
 
 hs.window.animationDuration = 0 -- disable animations
