@@ -2,14 +2,17 @@
 
 # Set up symlinks for the included dotfiles
 
+# Alacritty
+ln -s $PWD/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+
 # ZSH
 ln -s $PWD/zsh/zshrc ~/.zshrc
 
 # Git
 ln -s $PWD/git/gitconfig ~/.gitconfig
 
+# Neovim
 if command -v nvim > /dev/null 2>&1; then
-  # Neovim
   ln -s $PWD/nvim/init.vim ~/.config/nvim/init.vim
   ln -s $PWD/nvim/plugins.vim ~/.config/nvim/plugins.vim
 else

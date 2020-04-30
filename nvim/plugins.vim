@@ -19,4 +19,7 @@ endif
 " ============================================================================ "
 call plug#begin('~/.config/nvim/plugged')
 
+" Elixir support
+Plug 'elixir-editors/vim-elixir'
+
 call plug#end()
