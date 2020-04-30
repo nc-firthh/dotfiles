@@ -18,7 +18,7 @@ set softtabstop=2
 colorscheme gruvbox
 
 " Show whitespace characters
-set list listchars=tab:<=>,trail:·
+set list listchars=trail:·
 
 " Make background transparent
 hi! Normal guibg=NONE ctermbg=NONE
