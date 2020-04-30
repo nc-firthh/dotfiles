@@ -5,6 +5,9 @@
 # Alacritty
 ln -s $PWD/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 
+# Hammerspoon
+ln -s $PWD/hammerspoon/init.lua ~/.hammerspoon/init.lua
+
 # ZSH
 ln -s $PWD/zsh/zshrc ~/.zshrc
 
