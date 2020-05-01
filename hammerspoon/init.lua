@@ -1,8 +1,10 @@
-local padding = 12
-local mash = { 'ctrl', 'alt', 'cmd' }
+hs.window.animationDuration = 0 -- disable animations
+
+local defaultPadding = 12
+local defaultMash  = { 'ctrl', 'alt', 'cmd' }
 
 function move(x, y, w, h, p)
-  p = p or padding
+  p = p or defaultPadding
 
   local win = hs.window.focusedWindow()
   local f = win:frame()
@@ -17,34 +19,38 @@ function move(x, y, w, h, p)
   win:setFrame(f)
 end
 
-function center()        move(0, 0, 1, 1, 42) end
-function fill()          move(0, 0, 1, 1) end
-function top50()         move(0, 0, 1, 0.5) end
-function left60()        move(0, 0, 0.6, 1) end
-function left50()        move(0, 0, 0.5, 1) end
-function left40()        move(0, 0, 0.4, 1) end
-function right60()       move(0.4, 0, 0.6, 1) end
-function right50()       move(0.5, 0, 0.5, 1) end
-function right40()       move(0.6, 0, 0.4, 1) end
-function bottom50()      move(0, 0.5, 1, 0.5) end
-function topLeft50()     move(0, 0, 0.5, 0.5) end
-function topRight50()    move(0.5, 0, 0.5, 0.5) end
-function bottomLeft50()  move(0, 0.5, 0.5, 0.5) end
+function bindHotkey(key, func, mash)
+  mash = mash or defaultMash
+  hs.hotkey.bind(mash, key, func)
+end
+
+function center()        move(0.0, 0.0, 1.0, 1.0, 111) end
+function fill()          move(0.0, 0.0, 1.0, 1.0) end
+function top50()         move(0.0, 0.0, 1.0, 0.5) end
+function left60()        move(0.0, 0.0, 0.6, 1.0) end
+function left50()        move(0.0, 0.0, 0.5, 1.0) end
+function left40()        move(0.0, 0.0, 0.4, 1.0) end
+function right60()       move(0.4, 0.0, 0.6, 1.0) end
+function right50()       move(0.5, 0.0, 0.5, 1.0) end
+function right40()       move(0.6, 0.0, 0.4, 1.0) end
+function bottom50()      move(0.0, 0.5, 1.0, 0.5) end
+function topLeft50()     move(0.0, 0.0, 0.5, 0.5) end
+function topRight50()    move(0.5, 0.0, 0.5, 0.5) end
+function bottomLeft50()  move(0.0, 0.5, 0.5, 0.5) end
 function bottomRight50() move(0.5, 0.5, 0.5, 0.5) end
 
-hs.hotkey.bind(mash, "C", center)
-hs.hotkey.bind(mash, "F", fill)
-hs.hotkey.bind(mash, "K", top50)
-hs.hotkey.bind(mash, "N", left40)
-hs.hotkey.bind(mash, "H", left50)
-hs.hotkey.bind(mash, "U", left60)
-hs.hotkey.bind(mash, "I", right40)
-hs.hotkey.bind(mash, "L", right50)
-hs.hotkey.bind(mash, "M", right60)
-hs.hotkey.bind(mash, "J", bottom50)
-hs.hotkey.bind(mash, "1", topLeft50)
-hs.hotkey.bind(mash, "2", topRight50)
-hs.hotkey.bind(mash, "3", bottomRight50)
-hs.hotkey.bind(mash, "4", bottomLeft50)
+bindHotkey("C", center)
+bindHotkey("F", fill)
+bindHotkey("K", top50)
+bindHotkey("N", left40)
+bindHotkey("H", left50)
+bindHotkey("U", left60)
+bindHotkey("I", right40)
+bindHotkey("L", right50)
+bindHotkey("M", right60)
+bindHotkey("J", bottom50)
+bindHotkey("1", topLeft50)
+bindHotkey("2", topRight50)
+bindHotkey("3", bottomRight50)
+bindHotkey("4", bottomLeft50)
 
-hs.window.animationDuration = 0 -- disable animations
