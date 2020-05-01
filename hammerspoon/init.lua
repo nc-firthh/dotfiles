@@ -1,6 +1,6 @@
 hs.window.animationDuration = 0 -- disable animations
 
-local defaultPadding = 12
+local defaultPadding = 8
 local defaultMash  = { 'ctrl', 'alt', 'cmd' }
 
 function move(x, y, w, h, p)
@@ -10,10 +10,11 @@ function move(x, y, w, h, p)
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
+  local aspectRatio = max.w / max.h
 
-  f.x = max.x + (max.w * x) + p
+  f.x = max.x + (max.w * x) + p * aspectRatio
   f.y = max.y + (max.h * y) + p
-  f.w = max.w * w - (p * 2)
+  f.w = max.w * w - (p * aspectRatio * 2)
   f.h = max.h * h - (p * 2)
 
   win:setFrame(f)
@@ -24,7 +25,7 @@ function bindHotkey(key, func, mash)
   hs.hotkey.bind(mash, key, func)
 end
 
-function center()        move(0.0, 0.0, 1.0, 1.0, 111) end
+function center()        move(0.0, 0.0, 1.0, 1.0, 64) end
 function fill()          move(0.0, 0.0, 1.0, 1.0) end
 function top50()         move(0.0, 0.0, 1.0, 0.5) end
 function left60()        move(0.0, 0.0, 0.6, 1.0) end
