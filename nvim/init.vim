@@ -66,7 +66,14 @@ noremap  <C-E> :Explore<CR>
 " ======================================================================== "
 " ===                         PLUGIN SETUP                             === "
 " ======================================================================== "
-"
+
+" Transparent gitgutter background
+hi SignColumn ctermbg=NONE guibg=NONE
+hi GitGutterAdd ctermbg=NONE guibg=NONE
+hi GitGutterChange ctermbg=NONE guibg=NONE
+hi GitGutterDelete ctermbg=NONE guibg=NONE
+hi GitGutterChangeDelete ctermbg=NONE guibg=NONE
+
 " coc.nvim recommended configuration from the README
   " TextEdit might fail if hidden is not set.
   set hidden
