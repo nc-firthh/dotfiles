@@ -11,6 +11,9 @@ ln -s $PWD/hammerspoon/init.lua ~/.hammerspoon/init.lua
 # ZSH
 ln -s $PWD/zsh/zshrc ~/.zshrc
 
+# ZSH
+ln -s $PWD/vim/vimrc ~/.vimrc
+
 
 # Neovim
 if command -v nvim > /dev/null 2>&1; then
