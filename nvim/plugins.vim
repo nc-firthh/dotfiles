@@ -21,6 +21,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Tools
 Plug 'airblade/vim-gitgutter'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Syntax
 Plug 'elixir-editors/vim-elixir'
