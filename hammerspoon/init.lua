@@ -28,12 +28,12 @@ end
 function center()        move(0.0, 0.0, 1.0, 1.0, 64) end
 function fill()          move(0.0, 0.0, 1.0, 1.0) end
 function top50()         move(0.0, 0.0, 1.0, 0.5) end
-function left60()        move(0.0, 0.0, 0.6, 1.0) end
+function left60()        move(0.0, 0.0, 0.58, 1.0) end
 function left50()        move(0.0, 0.0, 0.5, 1.0) end
-function left40()        move(0.0, 0.0, 0.4, 1.0) end
-function right60()       move(0.4, 0.0, 0.6, 1.0) end
+function left40()        move(0.0, 0.0, 0.42, 1.0) end
+function right60()       move(0.42, 0.0, 0.58, 1.0) end
 function right50()       move(0.5, 0.0, 0.5, 1.0) end
-function right40()       move(0.6, 0.0, 0.4, 1.0) end
+function right40()       move(0.58, 0.0, 0.42, 1.0) end
 function bottom50()      move(0.0, 0.5, 1.0, 0.5) end
 function topLeft50()     move(0.0, 0.0, 0.5, 0.5) end
 function topRight50()    move(0.5, 0.0, 0.5, 0.5) end
