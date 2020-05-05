@@ -67,6 +67,9 @@ noremap  <C-E> :Explore<CR>
 " ===                         PLUGIN SETUP                             === "
 " ======================================================================== "
 
+" Add shortcut for fzf
+map <C-p> :FZF<CR>
+
 " Transparent gitgutter background
 hi SignColumn ctermbg=NONE guibg=NONE
 hi GitGutterAdd ctermbg=NONE guibg=NONE

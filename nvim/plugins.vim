@@ -29,4 +29,7 @@ Plug 'elixir-editors/vim-elixir'
 " Color Schemes
 Plug 'morhetz/gruvbox'
 
+" Fuzzy finder
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
 call plug#end()
