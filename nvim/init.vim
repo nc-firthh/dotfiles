@@ -70,6 +70,9 @@ noremap  <C-E> :Explore<CR>
 " Add shortcut for fzf
 map <C-p> :FZF<CR>
 
+" Change default fzf command to respect .gitignore
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+
 " Transparent gitgutter background
 hi SignColumn ctermbg=NONE guibg=NONE
 hi GitGutterAdd ctermbg=NONE guibg=NONE
