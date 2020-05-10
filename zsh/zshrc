@@ -20,3 +20,5 @@ alias vscode-extensions="code --list-extensions | xargs -L 1 echo code --install
 
 # Import system-specific config
 source ~/.profile
+
+neofetch
