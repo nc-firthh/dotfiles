@@ -71,7 +71,7 @@ noremap  <C-E> :Explore<CR>
 map <C-p> :FZF<CR>
 
 " Change default fzf command to respect .gitignore
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+let $FZF_DEFAULT_COMMAND = 'ag --hidden -g ""'
 
 " Transparent gitgutter background
 hi SignColumn ctermbg=NONE guibg=NONE

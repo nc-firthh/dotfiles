@@ -11,8 +11,11 @@ ln -s $PWD/hammerspoon/init.lua ~/.hammerspoon/init.lua
 # ZSH
 ln -s $PWD/zsh/zshrc ~/.zshrc
 
-# ZSH
+# Vim
 ln -s $PWD/vim/vimrc ~/.vimrc
+
+# Ag
+ln -s $PWD/ag/agignore ~/.agignore
 
 
 # Neovim
