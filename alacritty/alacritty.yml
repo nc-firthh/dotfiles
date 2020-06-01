@@ -17,9 +17,9 @@ scrolling:
 
 font:
   normal:
-    family: Liga Lekton
+    family: Fira Code
 
-  size: 16.0
+  size: 14.0
 
 
 colors:
