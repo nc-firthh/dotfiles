@@ -25,9 +25,8 @@ set listchars=trail:·,tab:>-
 hi! Normal guibg=NONE ctermbg=NONE
 hi! NonText guibg=NONE ctermbg=NONE guifg=NONE ctermbg=NONE
 
-" Highlight current line
-set cursorline
-hi CursorLine cterm=none ctermbg=238
+" Set relative numbering
+set relativenumber
 
 " Change color of Visual mode
 hi Visual ctermbg=238
