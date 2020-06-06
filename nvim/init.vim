@@ -22,11 +22,14 @@ set list
 set listchars=trail:·,tab:>-
 
 " Make background transparent
-hi! Normal guibg=NONE ctermbg=NONE
-hi! NonText guibg=NONE ctermbg=NONE guifg=NONE ctermbg=NONE
+hi! CursorLine ctermbg=NONE
+hi! CursorLineNr ctermbg=NONE
+hi! LineNr ctermbg=NONE
+hi! Normal ctermbg=NONE
 
 " Set relative numbering
-set relativenumber
+set nu
+set rnu
 
 " Change color of Visual mode
 hi Visual ctermbg=238
