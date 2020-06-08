@@ -61,11 +61,15 @@ map <C-p> :FZF<CR>
 let $FZF_DEFAULT_COMMAND = 'ag --hidden -g ""'
 
 " Transparent gitgutter background
-hi SignColumn ctermbg=NONE guibg=NONE
-hi GitGutterAdd ctermbg=NONE guibg=NONE
-hi GitGutterChange ctermbg=NONE guibg=NONE
-hi GitGutterDelete ctermbg=NONE guibg=NONE
-hi GitGutterChangeDelete ctermbg=NONE guibg=NONE
+hi SignColumn ctermbg=NONE
+hi SignifyLineAdd ctermbg=NONE
+hi SignifyLineChange ctermbg=NONE
+hi SignifyLineDelete ctermbg=NONE
+hi SignifyLineDeleteFirstLine ctermbg=NONE
+hi SignifySignAdd ctermbg=NONE
+hi SignifySignChange ctermbg=NONE
+hi SignifySignDelete ctermbg=NONE
+hi SignifySignDeleteFirstLine ctermbg=NONE
 
 " coc.nvim recommended configuration from the README
   " TextEdit might fail if hidden is not set.
