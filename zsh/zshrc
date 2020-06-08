@@ -5,10 +5,6 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# ==========================================
-# ===          PERSONAL ALIASES          ===
-# ==========================================
-
 # Amend an old commit using the hash as an argument
 gfix() {
   git commit --fixup="$1"
@@ -18,7 +14,14 @@ gfix() {
 # Get installed vscode extensions
 alias vscode-extensions="code --list-extensions | xargs -L 1 echo code --install-extension"
 
+# Use FZF for search
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
 # Import system-specific config
 source ~/.profile
 
-neofetch
+# Run neofetch if it's installed
+if type "$neofetch" > /dev/null; then
+  neofetch
+fi

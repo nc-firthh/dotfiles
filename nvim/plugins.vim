@@ -28,7 +28,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'elixir-editors/vim-elixir'
 
 " Color Schemes
-Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 
 " Fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
