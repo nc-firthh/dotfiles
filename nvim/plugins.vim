@@ -20,9 +20,10 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 
 " Tools
-Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
 
 " Syntax
 Plug 'elixir-editors/vim-elixir'

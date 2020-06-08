@@ -34,22 +34,6 @@ set rnu
 " Change color of Visual mode
 hi Visual ctermbg=238
 
-" Custom status-line
-set statusline=
-
-  " Right-hand side
-  set statusline+=\ %M
-  set statusline+=\ %y
-  set statusline+=\ %r
-  set statusline+=\ %F
-
-  " Switch sides
-  set statusline+=%=
-
-  " Left-hand side
-  set statusline+=\ %c:%l/%L
-  set statusline+=\ [%p%%]
-
 " Custom netrw (file explorer) config
 let g:netrw_banner= 0
 let g:netrw_liststyle= 3
