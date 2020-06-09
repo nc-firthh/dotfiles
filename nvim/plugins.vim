@@ -29,6 +29,7 @@ Plug 'vim-airline/vim-airline'
 
 " Syntax
 Plug 'elixir-editors/vim-elixir'
+Plug 'mhinz/vim-mix-format'
 
 " Color Schemes
 Plug 'gruvbox-community/gruvbox'
