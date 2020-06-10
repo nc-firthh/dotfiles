@@ -30,6 +30,7 @@ Plug 'vim-airline/vim-airline'
 " Syntax
 Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
+Plug 'mattn/emmet-vim'
 
 " Color Schemes
 Plug 'gruvbox-community/gruvbox'

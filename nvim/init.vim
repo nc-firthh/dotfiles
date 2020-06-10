@@ -60,6 +60,9 @@ map <C-p> :FZF<CR>
 " Change default fzf command to respect .gitignore
 let $FZF_DEFAULT_COMMAND = 'ag --hidden -g ""'
 
+" Change trigger for Emmet.vim
+let g:user_emmet_leader_key = '\'
+
 " Transparent gitgutter background
 hi SignColumn ctermbg=NONE
 hi SignifyLineAdd ctermbg=NONE
