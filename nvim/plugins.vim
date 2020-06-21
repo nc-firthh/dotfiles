@@ -31,6 +31,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
 Plug 'mattn/emmet-vim'
+Plug 'cakebaker/scss-syntax.vim'
 
 " Color Schemes
 Plug 'gruvbox-community/gruvbox'
