@@ -34,12 +34,6 @@ set rnu
 " Change color of Visual mode
 hi Visual ctermbg=238
 
-" Custom netrw (file explorer) config
-let g:netrw_banner= 0
-let g:netrw_liststyle= 3
-let g:netrw_winsize= 25
-let g:netrw_list_hide= netrw_gitignore#Hide().'.*\.swp$'
-
 " ======================================================================== "
 " ===                         KEY MAPPINGS                             === "
 " ======================================================================== "
@@ -59,6 +53,11 @@ map <C-p> :call fzf#vim#gitfiles('', fzf#vim#with_preview('right'))<CR>
 
 " Add shortcut for fzf :Ag
 map <C-f> :Ag<CR>
+
+" Replace netrw with ranger
+let g:ranger_map_keys = 0
+let g:ranger_replace_netrw = 1
+map <C-E> :Ranger<CR>
 
 " Change trigger for Emmet.vim
 let g:user_emmet_leader_key = '\'

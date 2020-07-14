@@ -21,6 +21,8 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Tools
 Plug 'easymotion/vim-easymotion'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
 Plug 'mhinz/vim-signify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'

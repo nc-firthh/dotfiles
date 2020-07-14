@@ -17,6 +17,8 @@ ln -s $PWD/vim/vimrc ~/.vimrc
 # Ag
 ln -s $PWD/ag/agignore ~/.agignore
 
+# Ranger
+ln -s $PWD/ranger/rc.conf ~/.config/ranger/rc.conf
 
 # Neovim
 if command -v nvim > /dev/null 2>&1; then
