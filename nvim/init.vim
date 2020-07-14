@@ -54,11 +54,11 @@ noremap  <C-E> :Explore<CR>
 " ===                         PLUGIN SETUP                             === "
 " ======================================================================== "
 
-" Add shortcut for fzf
-map <C-p> :FZF<CR>
+" Add shortcut for fzf :GFiles
+map <C-p> :call fzf#vim#gitfiles('', fzf#vim#with_preview('right'))<CR>
 
-" Change default fzf command to respect .gitignore
-let $FZF_DEFAULT_COMMAND = 'ag --hidden -g ""'
+" Add shortcut for fzf :Ag
+map <C-f> :Ag<CR>
 
 " Change trigger for Emmet.vim
 let g:user_emmet_leader_key = '\'

@@ -32,11 +32,13 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
 Plug 'mattn/emmet-vim'
 Plug 'cakebaker/scss-syntax.vim'
+Plug 'pangloss/vim-javascript'
 
 " Color Schemes
 Plug 'gruvbox-community/gruvbox'
 
 " Fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
