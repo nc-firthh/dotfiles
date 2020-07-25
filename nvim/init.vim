@@ -73,6 +73,14 @@ hi SignifySignChange ctermbg=NONE
 hi SignifySignDelete ctermbg=NONE
 hi SignifySignDeleteFirstLine ctermbg=NONE
 
+" Use mix format as elixir fixer
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'elixir': ['mix_format'],
+\}
+
+let g:ale_fix_on_save = 1
+
 " coc.nvim recommended configuration from the README
   " TextEdit might fail if hidden is not set.
   set hidden
