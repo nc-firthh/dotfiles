@@ -54,6 +54,14 @@ map <C-p> :Files<CR>
 " Add shortcut for fzf :Ag
 map <C-f> :Ag<CR>
 
+" Enable fzf preview window on the right with 60% width
+let g:fzf_colors =
+\ { 'fg': ['fg', 'Normal'],
+\ 'bg': ['bg', 'Normal']}
+let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+let g:fzf_preview_window = 'right:62%'
+let $FZF_DEFAULT_OPTS='--reverse'
+
 " Replace netrw with ranger
 let g:ranger_map_keys = 0
 let g:ranger_replace_netrw = 1
