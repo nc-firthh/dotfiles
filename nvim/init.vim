@@ -49,7 +49,7 @@ noremap  <C-E> :Explore<CR>
 " ======================================================================== "
 
 " Add shortcut for fzf :GFiles
-map <C-p> :call fzf#vim#gitfiles('', fzf#vim#with_preview('right'))<CR>
+map <C-p> :Files<CR>
 
 " Add shortcut for fzf :Ag
 map <C-f> :Ag<CR>
