@@ -32,6 +32,7 @@ Plug 'dense-analysis/ale'
 
 " Syntax
 Plug 'elixir-editors/vim-elixir'
+Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
 Plug 'mhinz/vim-mix-format'
 Plug 'mattn/emmet-vim'
 Plug 'cakebaker/scss-syntax.vim'
