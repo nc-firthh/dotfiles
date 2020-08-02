@@ -22,6 +22,7 @@ autoload -Uz compinit
 compinit
 
 # Use FZF for search
+export FZF_DEFAULT_COMMAND="rg -l ''"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Import system-specific config
