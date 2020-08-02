@@ -14,9 +14,15 @@ gfix() {
 # Get installed vscode extensions
 alias vscode-extensions="code --list-extensions | xargs -L 1 echo code --install-extension"
 
+# Set up asdf version manager
+. $HOME/.asdf/asdf.sh
+
+fpath=(${ASDF_DIR}/completions $fpath)
+autoload -Uz compinit
+compinit
+
 # Use FZF for search
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 
 # Import system-specific config
 source ~/.profile
