@@ -37,6 +37,7 @@ Plug 'mhinz/vim-mix-format'
 Plug 'mattn/emmet-vim'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'pangloss/vim-javascript'
+Plug 'MaxMEllon/vim-jsx-pretty'
 
 " Color Schemes
 Plug 'gruvbox-community/gruvbox'
