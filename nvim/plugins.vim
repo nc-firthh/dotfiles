@@ -38,6 +38,7 @@ Plug 'mattn/emmet-vim'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'ekalinin/Dockerfile.vim'
 
 " Color Schemes
 Plug 'gruvbox-community/gruvbox'
