@@ -25,6 +25,10 @@ compinit
 export FZF_DEFAULT_COMMAND="rg -l --hidden --iglob '!.git' ''"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Use neovim as default editor
+ export VISUAL=nvim;
+ export EDITOR=nvim;
+
 # Import system-specific config
 source ~/.profile
 

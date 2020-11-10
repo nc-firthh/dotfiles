@@ -39,6 +39,7 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'ekalinin/Dockerfile.vim'
+Plug 'hashivim/vim-terraform'
 
 " Color Schemes
 Plug 'gruvbox-community/gruvbox'
