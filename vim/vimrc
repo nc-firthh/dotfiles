@@ -3,12 +3,11 @@ syntax on
 " Vim Plug
 call plug#begin('~/.vim/plugged')
 
-Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
-Plug 'elixir-editors/vim-elixir'
 
 call plug#end()
 " Vim Plug
@@ -21,7 +20,18 @@ set number relativenumber
 
 set mouse=a
 
+set scrolloff=8
+
 autocmd InsertEnter,InsertLeave * set cul!
+
+set laststatus=2
+
+set statusline=
+set statusline+=\ %f
+set statusline+=%=
+set statusline+=\ %p%%
+set statusline+=\ %l:%c
+set statusline+=\ %y
 
 map <C-E> :Explore<CR>
 let g:netrw_liststyle = 3
@@ -33,6 +43,15 @@ let $FZF_DEFAULT_OPTS='--reverse'
 
 set hidden
 
+set incsearch
+
+set nowrap
+set nohlsearch
+set noerrorbells
+
+set belloff=all
+
+set noswapfile
 set nobackup
 set nowritebackup
 
