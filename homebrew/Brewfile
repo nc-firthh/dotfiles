@@ -1,0 +1,18 @@
+# asdf Erlang dependencies
+brew "openssl"
+brew "autoconf"
+brew "wxmac"
+
+# asdf NodeJS dependencies
+brew "coreutils"
+brew "gpg"
+
+# Vim dependencies
+brew "vim"
+brew "fzf"
+brew "ranger"
+
+# Casks
+cask "hammerspoon"
+cask "keycastr"
+
