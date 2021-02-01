@@ -8,6 +8,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
+Plug 'francoiscabrol/ranger.vim'
 
 call plug#end()
 " Vim Plug
@@ -33,8 +34,10 @@ set statusline+=\ %p%%
 set statusline+=\ %l:%c
 set statusline+=\ %y
 
-map <C-E> :Explore<CR>
-let g:netrw_liststyle = 3
+map <C-E> :Ranger<CR>
+let g:ranger_map_keys = 0
+let g:ranger_replace_netrw = 1
+
 
 map <C-P> :GFiles --cached --exclude-standard --others<CR>
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
