@@ -4,10 +4,12 @@ syntax on
 call plug#begin('~/.vim/plugged')
 
 Plug 'gruvbox-community/gruvbox'
+Plug 'sheerun/vim-polyglot'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'sheerun/vim-polyglot'
+
 Plug 'francoiscabrol/ranger.vim'
 
 call plug#end()
@@ -16,6 +18,7 @@ call plug#end()
 " Go Settings
 
 autocmd FileType go setlocal noexpandtab tabstop=8
+let g:go_doc_popup_window = 1
 
 " Go Settings
 
