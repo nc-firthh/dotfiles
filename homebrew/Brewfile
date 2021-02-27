@@ -10,7 +10,15 @@ brew "gpg"
 # Vim dependencies
 brew "vim"
 brew "fzf"
+brew "ripgrep"
 brew "ranger"
+
+# CLIs
+brew "exercism"
+
+# Miscellaneous goodies
+brew "bat"
+brew "glow"
 
 # Casks
 cask "hammerspoon"
