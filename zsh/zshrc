@@ -22,9 +22,9 @@ autoload -Uz compinit
 compinit
 
 # Use FZF for search
-iglobs=""                   # Globs to pass to default fzf rg command
-iglobs+=" --iglob '!.git'"  # Ignore *.git files in files search
-iglobs+=" --iglob '!.beam'" # Ignore *.beam files in files search
+iglobs=""                   # File globs for ripgrep
+iglobs+=" --iglob '!.git'"  # Ignore *.git files
+iglobs+=" --iglob '!.beam'" # Ignore *.beam files
 
 export FZF_DEFAULT_COMMAND="rg --files --hidden $iglobs"
 export FZF_DEFAULT_OPTS='-m --height 50% --border'
