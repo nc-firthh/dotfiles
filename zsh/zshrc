@@ -22,10 +22,12 @@ autoload -Uz compinit
 compinit
 
 # Use FZF for search
-if type rg &> /dev/null; then
-  export FZF_DEFAULT_COMMAND="rg -l --hidden --iglob '!.git' ''"
-  export FZF_DEFAULT_OPTS='-m --height 50% --border'
-fi
+iglobs=""                   # Globs to pass to default fzf rg command
+iglobs+=" --iglob '!.git'"  # Ignore *.git files in files search
+iglobs+=" --iglob '!.beam'" # Ignore *.beam files in files search
+
+export FZF_DEFAULT_COMMAND="rg --files --hidden $iglobs"
+export FZF_DEFAULT_OPTS='-m --height 50% --border'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
