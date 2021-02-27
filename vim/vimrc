@@ -16,7 +16,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 
 call plug#end()
-" Vim Plug
 
 " The best colorscheme
 colorscheme gruvbox
@@ -31,6 +30,7 @@ set scrolloff=8
 " Highlight current line when inserting
 autocmd InsertEnter,InsertLeave * set cul!
 
+" Set characters for tab indentation and trailing whitespace
 set list
 set listchars=trail:·,tab:>-
 hi SpecialKey ctermfg=59 guifg=#5f5f5f
