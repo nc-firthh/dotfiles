@@ -1,29 +1,56 @@
 #!/bin/zsh
 
-# Set up symlinks for the included dotfiles
+# Install Homebrew
+if ! command -v brew &> /dev/null
+then
+    echo "Installing Homebrew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
 
-# Alacritty
-ln -s $PWD/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+# Install asdf-vm
+if ! command -v asdf &> /dev/null
+then
+    echo "Installing asdf-vm..."
+    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
+fi
 
-# Hammerspoon
-ln -s $PWD/hammerspoon/init.lua ~/.hammerspoon/init.lua
+# Files to symlink
+Brewfile=~/Brewfile
+zsh=~/.zshrc
+vim=~/.vimrc
+ranger=~/.config/ranger/rc.conf
+hammerspoon=~/.hammerspoon/init.lua
+
+# Homebrew
+if [ ! -L $Brewfile ] ; then
+    echo "Creating symbolic link for Brewfile..."
+    ln -s $PWD/homebrew/Brewfile $Brewfile
+fi
+
+echo "Installing Brewfile packages..."
+brew bundle --file=$Brewfile
 
 # ZSH
-ln -s $PWD/zsh/zshrc ~/.zshrc
+if [ ! -L $zsh ] ; then
+    echo "Creating symbolic link for .zshrc..."
+    ln -s $PWD/zsh/zshrc $zsh
+fi
 
 # Vim
-ln -s $PWD/vim/vimrc ~/.vimrc
-
-# Ag
-ln -s $PWD/ag/agignore ~/.agignore
+if [ ! -L $vim ] ; then
+    echo "Creating symbolic link for .vimrc..."
+    ln -s $PWD/vim/vimrc $vim
+fi
 
 # Ranger
-ln -s $PWD/ranger/rc.conf ~/.config/ranger/rc.conf
-
-# Neovim
-if command -v nvim > /dev/null 2>&1; then
-  ln -s $PWD/nvim/init.vim ~/.config/nvim/init.vim
-  ln -s $PWD/nvim/plugins.vim ~/.config/nvim/plugins.vim
-else
-  echo "Dotfiles for nvim were not symlinked, as nvim is not installed. Install nvim, you monster."
+if [ ! -L $ranger ] ; then
+    echo "Creating symbolic link for Ranger config..."
+    ln -s $PWD/ranger/rc.conf $ranger
 fi
+
+# Hammerspoon
+if [ ! -L $hammerspoon ] ; then
+    echo "Creating symbolic link for Hammerspoon config..."
+    ln -s $PWD/hammerspoon/init.lua $hammerspoon
+fi
+
