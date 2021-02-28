@@ -44,8 +44,11 @@ set statusline+=\ %p%%
 set statusline+=\ %l:%c
 set statusline+=\ %y
 
+" Buffer interactions
+nnoremap <silent> <C-b> :buffers<CR>
+
 " Exploring File Tree
-map <C-E> :Ranger<CR>
+nnoremap <silent> <C-e> :Ranger<CR>
 let g:ranger_map_keys = 0
 let g:ranger_replace_netrw = 1
 
