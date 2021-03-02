@@ -84,10 +84,17 @@ set shortmess+=c
 " Always show signcolumn with transparent background
 set signcolumn=yes
 highlight clear SignColumn
-highlight GitGutterAdd ctermfg=green
-highlight GitGutterChange ctermfg=yellow
-highlight GitGutterDelete ctermfg=red
-highlight GitGutterChangeDelete ctermfg=brown
+highlight GitGutterAdd          ctermfg=142
+highlight GitGutterChange       ctermfg=214
+highlight GitGutterDelete       ctermfg=167
+highlight GitGutterChangeDelete ctermfg=208
+highlight GruvboxRedSign        ctermfg=167 ctermbg=NONE
+highlight GruvboxGreenSign      ctermfg=142 ctermbg=NONE
+highlight GruvboxYellowSign     ctermfg=214 ctermbg=NONE
+highlight GruvboxBlueSign       ctermfg=109 ctermbg=NONE
+highlight GruvboxPurpleSign     ctermfg=175 ctermbg=NONE
+highlight GruvboxAquaSign       ctermfg=108 ctermbg=NONE
+highlight GruvboxOrangeSign     ctermfg=208 ctermbg=NONE
 
 " Go Settings
 autocmd FileType go setlocal noexpandtab tabstop=8
