@@ -19,6 +19,7 @@ Brewfile=~/Brewfile
 zsh=~/.zshrc
 vim=~/.vimrc
 ranger=~/.config/ranger/rc.conf
+bat=~/.config/bat/config
 hammerspoon=~/.hammerspoon/init.lua
 
 # Homebrew
@@ -46,6 +47,12 @@ fi
 if [ ! -L $ranger ] ; then
     echo "Creating symbolic link for Ranger config..."
     ln -s $PWD/ranger/rc.conf $ranger
+fi
+
+# BAT
+if [ ! -L $bat ] ; then
+    echo "Creating symbolic link for BAT config..."
+    ln -s $PWD/bat/config $bat
 fi
 
 # Hammerspoon
