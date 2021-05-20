@@ -11,6 +11,7 @@ Performs the following:
 * Conditionally symlinks a [.vimrc](vim/vimrc) file to ~/.vimrc
 * Conditionally symlinks a [Ranger config](ranger/rc.conf) file to ~/.config/ranger/rc.conf
 * Conditionally symlinks a [Hammerspoon config](hammerspoon/init.lua) file to ~/.hammerspoon/init.lua
+* Conditionally symlinks [neovim](neovim/) init files to ~/.config/nvim/
 
 ## Installation
 

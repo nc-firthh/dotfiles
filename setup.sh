@@ -18,6 +18,8 @@ fi
 Brewfile=~/Brewfile
 zsh=~/.zshrc
 vim=~/.vimrc
+nvim_init=~/.config/nvim/init.lua
+nvim_utils=~/.config/nvim/lua/utils.lua
 ranger=~/.config/ranger/rc.conf
 bat=~/.config/bat/config
 hammerspoon=~/.hammerspoon/init.lua
@@ -41,6 +43,19 @@ fi
 if [ ! -L $vim ] ; then
     echo "Creating symbolic link for .vimrc..."
     ln -s $PWD/vim/vimrc $vim
+fi
+
+# Neovim
+if [ ! -L $nvim_init ] ; then
+    echo "Creating symbolic link for nvim/init.lua..."
+    mkdir -p ~/.config/nvim
+    ln -s $PWD/neovim/init.lua $nvim_init
+fi
+
+if [ ! -L $nvim_utils ] ; then
+    echo "Creating symbolic link for nvim/lua/utils.lua..."
+    mkdir -p ~/.config/nvim/lua
+    ln -s $PWD/neovim/utils.lua $nvim_utils
 fi
 
 # Ranger
