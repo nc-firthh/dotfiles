@@ -15,6 +15,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'mattn/webapi-vim'
 
 call plug#end()
 
@@ -102,6 +103,9 @@ autocmd FileType go setlocal noexpandtab tabstop=8
 let g:go_doc_popup_window = 1
 let g:go_def_mapping_enabled = 0
 let g:go_code_completion_ennabled = 0
+
+" Rust Settings
+let g:rust_clip_command = 'pbcopy'
 
 " Default Coc stuff
 command! -nargs=0 Format :call CocAction('format')
