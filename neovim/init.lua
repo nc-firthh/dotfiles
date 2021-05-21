@@ -1,3 +1,4 @@
+u = require('lsp')
 u = require('utils')
 
 -- Enable syntax first so `hi` cmds work
@@ -25,14 +26,34 @@ u.plugin 'nvim-telescope/telescope.nvim'
 
 u.remap('<C-p>', ':Telescope find_files<cr>')
 
+-- Language Server Protocol
+-- See lsp.lua for server-specific config
+u.plugin 'neovim/nvim-lspconfig'
+
+-- Autocompletion
+u.plugin 'hrsh7th/nvim-compe'
+
+vim.o.completeopt = "menuone,noselect"
+
+require'compe'.setup({
+	enabled = true,
+	source = {
+		path = true,
+		buffer = true,
+		nvim_lsp = true,
+	},
+})
+
 -- Tpope goodness
 u.plugin 'tpope/vim-fugitive'
 u.plugin 'tpope/vim-rhubarb'
 u.plugin 'tpope/vim-repeat'
 u.plugin 'tpope/vim-surround'
 
--- Stylish GitGutter
+-- Speedy Stylish GitGutter
 u.plugin 'airblade/vim-gitgutter'
+
+u.set_global('updatetime', 100)
 
 u.cmd('hi GitGutterAdd          ctermfg=142')
 u.cmd('hi GitGutterChange       ctermfg=214')
