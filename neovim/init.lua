@@ -83,3 +83,6 @@ u.cmd('hi SpecialKey ctermfg=59 guifg=#5f5f5f')
 
 -- Search preferences
 u.set_global('incsearch', true)
+
+-- Pretty Terminal Commands
+u.cmd('command -nargs=+ T :bot 20sp term://<args>')
