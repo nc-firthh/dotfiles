@@ -83,7 +83,7 @@ u.set_global('scrolloff', 8)
 
 -- Fancy whitespace characters
 u.set_window('list', true)
-u.set_window('listchars', 'trail:·,tab:>-')
+u.set_global('listchars', 'trail:·,tab:>-')
 
 u.cmd('hi SpecialKey ctermfg=59 guifg=#5f5f5f')
 
