@@ -29,6 +29,7 @@ u.remap('<C-f>', ':Telescope grep_string<cr>')
 
 -- Ranger & keybindings
 u.plugin 'francoiscabrol/ranger.vim'
+u.plugin 'rbgrouleff/bclose.vim'
 
 u.remap('<C-r>', ':Ranger<cr>')
 
