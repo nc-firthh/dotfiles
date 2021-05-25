@@ -25,6 +25,12 @@ u.plugin 'nvim-lua/plenary.nvim'
 u.plugin 'nvim-telescope/telescope.nvim'
 
 u.remap('<C-p>', ':Telescope find_files<cr>')
+u.remap('<C-f>', ':Telescope grep_string<cr>')
+
+-- Ranger & keybindings
+u.plugin 'francoiscabrol/ranger.vim'
+
+u.remap('<C-r>', ':Ranger<cr>')
 
 -- Language Server Protocol
 -- See lsp.lua for server-specific config
