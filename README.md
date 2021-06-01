@@ -18,5 +18,5 @@ Performs the following:
 On a Unix-based system, run the setup script to set up symbolic links for the included dotfiles:
 
 ```bash
-$ bash setup.sh
+./setup
 ```

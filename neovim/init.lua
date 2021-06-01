@@ -24,7 +24,7 @@ u.plugin 'nvim-lua/popup.nvim'
 u.plugin 'nvim-lua/plenary.nvim'
 u.plugin 'nvim-telescope/telescope.nvim'
 
-u.remap('<C-p>', ':Telescope find_files<cr>')
+u.remap('<C-p>', ':Telescope find_files find_command=rg,--ignore,--hidden,--files<cr>')
 u.remap('<C-f>', ':Telescope grep_string<cr>')
 
 -- Ranger & keybindings
@@ -42,7 +42,7 @@ u.plugin 'hrsh7th/nvim-compe'
 
 vim.o.completeopt = "menuone,noselect"
 
-require'compe'.setup({
+require('compe').setup({
 	enabled = true,
 	source = {
 		path = true,

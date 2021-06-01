@@ -20,6 +20,7 @@ zsh=~/.zshrc
 vim=~/.vimrc
 nvim_init=~/.config/nvim/init.lua
 nvim_utils=~/.config/nvim/lua/utils.lua
+ripgrep=~/.ignore
 ranger=~/.config/ranger/rc.conf
 bat=~/.config/bat/config
 hammerspoon=~/.hammerspoon/init.lua
@@ -56,6 +57,11 @@ if [ ! -L $nvim_utils ] ; then
     echo "Creating symbolic link for nvim/lua/utils.lua..."
     mkdir -p ~/.config/nvim/lua
     ln -s $PWD/neovim/utils.lua $nvim_utils
+fi
+
+if [ ! -L $ripgrep ] ; then
+	echo "Adding .ignore for ripgrep..."
+	ln -s $PWD/ripgrep/ignore $ripgrep
 fi
 
 # Ranger
