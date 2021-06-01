@@ -14,4 +14,4 @@ local nvim_lsp = require('lspconfig')
 -- }
 
 -- gopls
--- nvim_lsp.elixirls.setup{}
+-- nvim_lsp.gopls.setup{}

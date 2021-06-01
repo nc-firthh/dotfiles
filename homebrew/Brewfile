@@ -9,12 +9,10 @@ brew "gpg"
 
 # Vim dependencies
 brew "vim"
+brew "neovim", args: ["HEAD"]
 brew "fzf"
 brew "ripgrep"
 brew "ranger"
-
-# CLIs
-brew "exercism"
 
 # Miscellaneous goodies
 brew "bat"
@@ -22,5 +20,4 @@ brew "glow"
 
 # Casks
 cask "hammerspoon"
-cask "keycastr"
 
