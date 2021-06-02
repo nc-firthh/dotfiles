@@ -3,15 +3,15 @@
 # Install Homebrew
 if ! command -v brew &> /dev/null
 then
-    echo "Installing Homebrew..."
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	echo "Installing Homebrew..."
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 # Install asdf-vm
 if ! command -v asdf &> /dev/null
 then
-    echo "Installing asdf-vm..."
-    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
+	echo "Installing asdf-vm..."
+	git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
 fi
 
 # Files to symlink
@@ -27,8 +27,8 @@ hammerspoon=~/.hammerspoon/init.lua
 
 # Homebrew
 if [ ! -L $Brewfile ] ; then
-    echo "Creating symbolic link for Brewfile..."
-    ln -s $PWD/homebrew/Brewfile $Brewfile
+	echo "Creating symbolic link for Brewfile..."
+	ln -s $PWD/homebrew/Brewfile $Brewfile
 fi
 
 echo "Installing Brewfile packages..."
@@ -36,27 +36,27 @@ brew bundle --file=$Brewfile
 
 # ZSH
 if [ ! -L $zsh ] ; then
-    echo "Creating symbolic link for .zshrc..."
-    ln -s $PWD/zsh/zshrc $zsh
+	echo "Creating symbolic link for .zshrc..."
+	ln -s $PWD/zsh/zshrc $zsh
 fi
 
 # Vim
 if [ ! -L $vim ] ; then
-    echo "Creating symbolic link for .vimrc..."
-    ln -s $PWD/vim/vimrc $vim
+	echo "Creating symbolic link for .vimrc..."
+	ln -s $PWD/vim/vimrc $vim
 fi
 
 # Neovim
 if [ ! -L $nvim_init ] ; then
-    echo "Creating symbolic link for nvim/init.lua..."
-    mkdir -p ~/.config/nvim
-    ln -s $PWD/neovim/init.lua $nvim_init
+	echo "Creating symbolic link for nvim/init.lua..."
+	mkdir -p ~/.config/nvim
+	ln -s $PWD/neovim/init.lua $nvim_init
 fi
 
 if [ ! -L $nvim_utils ] ; then
-    echo "Creating symbolic link for nvim/lua/utils.lua..."
-    mkdir -p ~/.config/nvim/lua
-    ln -s $PWD/neovim/utils.lua $nvim_utils
+	echo "Creating symbolic link for nvim/lua/utils.lua..."
+	mkdir -p ~/.config/nvim/lua
+	ln -s $PWD/neovim/utils.lua $nvim_utils
 fi
 
 if [ ! -L $ripgrep ] ; then
@@ -66,19 +66,19 @@ fi
 
 # Ranger
 if [ ! -L $ranger ] ; then
-    echo "Creating symbolic link for Ranger config..."
-    ln -s $PWD/ranger/rc.conf $ranger
+	echo "Creating symbolic link for Ranger config..."
+	ln -s $PWD/ranger/rc.conf $ranger
 fi
 
 # BAT
 if [ ! -L $bat ] ; then
-    echo "Creating symbolic link for BAT config..."
-    ln -s $PWD/bat/config $bat
+	echo "Creating symbolic link for BAT config..."
+	ln -s $PWD/bat/config $bat
 fi
 
 # Hammerspoon
 if [ ! -L $hammerspoon ] ; then
-    echo "Creating symbolic link for Hammerspoon config..."
-    ln -s $PWD/hammerspoon/init.lua $hammerspoon
+	echo "Creating symbolic link for Hammerspoon config..."
+	ln -s $PWD/hammerspoon/init.lua $hammerspoon
 fi
 
