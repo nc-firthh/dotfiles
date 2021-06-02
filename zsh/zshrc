@@ -32,8 +32,8 @@ export FZF_DEFAULT_OPTS='-m --height 50% --border'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Use neovim as default editor
-export VISUAL=neovim;
-export EDITOR=neovim;
+export VISUAL=nvim;
+export EDITOR=nvim;
 
 # Import system-specific config
 source ~/.profile
