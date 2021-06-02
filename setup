@@ -24,6 +24,7 @@ ripgrep=~/.ignore
 ranger=~/.config/ranger/rc.conf
 bat=~/.config/bat/config
 hammerspoon=~/.hammerspoon/init.lua
+kitty=~/.config/kitty/kitty.conf
 
 # Homebrew
 if [ ! -L $Brewfile ] ; then
@@ -82,3 +83,9 @@ if [ ! -L $hammerspoon ] ; then
 	ln -s $PWD/hammerspoon/init.lua $hammerspoon
 fi
 
+# Kitty
+if [ ! -L $kitty ] ; then
+	echo "Creating symbolic link for Kitty config..."
+	mkdir -p ~/.config/kitty
+	ln -s $PWD/kitty/kitty.conf
+fi

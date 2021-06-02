@@ -20,4 +20,5 @@ brew "glow"
 
 # Casks
 cask "hammerspoon"
+cask "kitty"
 
