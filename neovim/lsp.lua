@@ -14,4 +14,10 @@ local nvim_lsp = require('lspconfig')
 -- }
 
 -- gopls
--- nvim_lsp.gopls.setup{}
+-- nvim_lsp.gopls.setup{
+-- 	cmd = {"gopls", "--remote=auto"};
+-- 	on_attach = u.on_attach;
+-- 	settings = {
+-- 		elixirLS = {};
+-- 	};
+-- }
