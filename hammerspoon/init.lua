@@ -39,6 +39,10 @@ function topLeft50()     move(0.0, 0.0, 0.5, 0.5) end
 function topRight50()    move(0.5, 0.0, 0.5, 0.5) end
 function bottomLeft50()  move(0.0, 0.5, 0.5, 0.5) end
 function bottomRight50() move(0.5, 0.5, 0.5, 0.5) end
+function topLeft40()     move(0.0, 0.0, 0.42, 0.5) end
+function topRight40()    move(0.58, 0.0, 0.42, 0.5) end
+function bottomLeft40()  move(0.0, 0.5, 0.42, 0.5) end
+function bottomRight40() move(0.58, 0.5, 0.42, 0.5) end
 
 bindHotkey("C", center)
 bindHotkey("F", fill)
@@ -54,4 +58,8 @@ bindHotkey("1", topLeft50)
 bindHotkey("2", topRight50)
 bindHotkey("3", bottomRight50)
 bindHotkey("4", bottomLeft50)
+bindHotkey("5", topLeft40)
+bindHotkey("6", topRight40)
+bindHotkey("7", bottomRight40)
+bindHotkey("8", bottomLeft40)
 
