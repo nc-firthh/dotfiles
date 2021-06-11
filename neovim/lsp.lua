@@ -13,6 +13,16 @@ local nvim_lsp = require('lspconfig')
 -- 	};
 -- }
 
+-- elmls
+-- nvim_lsp.elmls.setup{
+-- 	on_attach = u.on_attach;
+-- }
+
+-- tsserver
+-- nvim_lsp.tsserver.setup{
+-- 	on_attach = u.on_attach;
+-- }
+
 -- gopls
 -- nvim_lsp.gopls.setup{
 -- 	cmd = {"gopls", "--remote=auto"};

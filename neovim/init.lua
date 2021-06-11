@@ -18,6 +18,9 @@ u.cmd('hi GruvboxOrangeSign     ctermfg=208 ctermbg=NONE')
 
 -- Syntax highlighting
 u.plugin 'elixir-editors/vim-elixir'
+u.plugin 'pangloss/vim-javascript'
+u.plugin 'MaxMEllon/vim-jsx-pretty'
+u.plugin 'ElmCast/vim-elm'
 
 -- Telescope deps and config
 u.plugin 'nvim-lua/popup.nvim'
