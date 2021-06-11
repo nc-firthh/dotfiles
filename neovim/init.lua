@@ -40,7 +40,7 @@ require('telescope').setup({
 u.plugin 'francoiscabrol/ranger.vim'
 u.plugin 'rbgrouleff/bclose.vim'
 
-u.remap('<C-e>', ':Ranger<cr>')
+u.remap('<C-b>', ':Ranger<cr>')
 
 -- Language Server Protocol
 -- See lsp.lua for server-specific config
