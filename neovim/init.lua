@@ -28,7 +28,13 @@ u.plugin 'nvim-lua/plenary.nvim'
 u.plugin 'nvim-telescope/telescope.nvim'
 
 u.remap('<C-p>', ':Telescope find_files find_command=rg,--ignore,--hidden,--files<cr>')
-u.remap('<C-f>', ':Telescope grep_string<cr>')
+u.remap('<C-f>', ':Telescope live_grep find_command=rg,-e<cr>')
+
+require('telescope').setup({
+	defaults = {
+		file_sorter =  require'telescope.sorters'.get_fzy_sorter,
+	}
+})
 
 -- Ranger & keybindings
 u.plugin 'francoiscabrol/ranger.vim'
