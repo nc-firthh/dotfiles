@@ -1,12 +1,12 @@
-u = require('lsp')
+require('lsp')
+require('plugins')
+
 u = require('utils')
 
 -- Enable syntax first so `hi` cmds work
 u.cmd('syntax on')
 
 -- Gruvbox baby
-u.plugin 'gruvbox-community/gruvbox'
-
 u.cmd('colorscheme gruvbox')
 u.cmd('hi GruvboxRedSign        ctermfg=167 ctermbg=NONE')
 u.cmd('hi GruvboxGreenSign      ctermfg=142 ctermbg=NONE')
@@ -16,17 +16,7 @@ u.cmd('hi GruvboxPurpleSign     ctermfg=175 ctermbg=NONE')
 u.cmd('hi GruvboxAquaSign       ctermfg=108 ctermbg=NONE')
 u.cmd('hi GruvboxOrangeSign     ctermfg=208 ctermbg=NONE')
 
--- Syntax highlighting
-u.plugin 'elixir-editors/vim-elixir'
-u.plugin 'pangloss/vim-javascript'
-u.plugin 'MaxMEllon/vim-jsx-pretty'
-u.plugin 'ElmCast/vim-elm'
-
 -- Telescope deps and config
-u.plugin 'nvim-lua/popup.nvim'
-u.plugin 'nvim-lua/plenary.nvim'
-u.plugin 'nvim-telescope/telescope.nvim'
-
 u.remap('<C-p>', ':Telescope find_files find_command=rg,--ignore,--hidden,--files<cr>')
 u.remap('<C-f>', ':Telescope live_grep find_command=rg,-e<cr>')
 
@@ -37,18 +27,9 @@ require('telescope').setup({
 })
 
 -- Ranger & keybindings
-u.plugin 'francoiscabrol/ranger.vim'
-u.plugin 'rbgrouleff/bclose.vim'
-
 u.remap('<C-b>', ':Ranger<cr>')
 
--- Language Server Protocol
--- See lsp.lua for server-specific config
-u.plugin 'neovim/nvim-lspconfig'
-
 -- Autocompletion
-u.plugin 'hrsh7th/nvim-compe'
-
 vim.o.completeopt = "menuone,noselect"
 
 require('compe').setup({
@@ -60,15 +41,7 @@ require('compe').setup({
 	},
 })
 
--- Tpope goodness
-u.plugin 'tpope/vim-fugitive'
-u.plugin 'tpope/vim-rhubarb'
-u.plugin 'tpope/vim-repeat'
-u.plugin 'tpope/vim-surround'
-
 -- Speedy Stylish GitGutter
-u.plugin 'airblade/vim-gitgutter'
-
 u.set_global('updatetime', 100)
 
 u.cmd('hi GitGutterAdd          ctermfg=142')

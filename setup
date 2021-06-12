@@ -19,6 +19,8 @@ Brewfile=~/Brewfile
 zsh=~/.zshrc
 vim=~/.vimrc
 nvim_init=~/.config/nvim/init.lua
+nvim_lsp=~/.config/nvim/lua/lsp.lua
+nvim_plugins=~/.config/nvim/lua/plugins.lua
 nvim_utils=~/.config/nvim/lua/utils.lua
 ripgrep=~/.ignore
 ranger=~/.config/ranger/rc.conf
@@ -54,12 +56,25 @@ if [ ! -L $nvim_init ] ; then
 	ln -s $PWD/neovim/init.lua $nvim_init
 fi
 
+if [ ! -L $nvim_lsp ] ; then
+	echo "Copying lsp.lua to config location..."
+	mkdir -p ~/.config/nvim/lua
+	cp $PWD/neovim/lsp.lua $nvim_lsp
+fi
+
+if [ ! -L $nvim_plugins ] ; then
+	echo "Creating symbolic link for nvim/lua/plugins.lua..."
+	mkdir -p ~/.config/nvim/lua
+	ln -s $PWD/neovim/plugins.lua $nvim_plugins
+fi
+
 if [ ! -L $nvim_utils ] ; then
 	echo "Creating symbolic link for nvim/lua/utils.lua..."
 	mkdir -p ~/.config/nvim/lua
 	ln -s $PWD/neovim/utils.lua $nvim_utils
 fi
 
+# Ripgrep
 if [ ! -L $ripgrep ] ; then
 	echo "Adding .ignore for ripgrep..."
 	ln -s $PWD/ripgrep/ignore $ripgrep
