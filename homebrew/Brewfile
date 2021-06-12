@@ -17,6 +17,7 @@ brew "ranger"
 # Miscellaneous goodies
 brew "bat"
 brew "glow"
+brew "fish"
 
 # Casks
 cask "hammerspoon"
