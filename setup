@@ -13,6 +13,7 @@ omf_channel=~/.config/omf/channel
 omf_theme=~/.config/omf/theme
 
 nvim_init=~/.config/nvim/init.lua
+nvim_ft=~/.config/nvim/after/ftplugin/
 nvim_lsp=~/.config/nvim/lua/lsp.lua
 nvim_plugins=~/.config/nvim/lua/plugins.lua
 nvim_utils=~/.config/nvim/lua/utils.lua
@@ -102,6 +103,12 @@ if [ ! -f $nvim_init ] ; then
 	echo "Creating symbolic link for nvim/init.lua..."
 	mkdir -p ~/.config/nvim
 	ln -s $PWD/neovim/init.lua $nvim_init
+fi
+
+if [ ! -d $nvim_ft ] ; then
+	echo "Creating symbolic link for nvim filetypes..."
+	mkdir -p ~/.config/nvim/after/ftplugin
+	ln -s $PWD/neovim/ftplugin/* $nvim_ft
 fi
 
 if [ ! -f $nvim_lsp ] ; then
