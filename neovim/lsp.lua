@@ -27,3 +27,8 @@ local nvim_lsp = require('lspconfig')
 -- nvim_lsp.gopls.setup{
 -- 	on_attach = u.on_attach;
 -- }
+
+-- rust-analyzer
+-- nvim_lsp.rust_analyzer.setup{
+-- 	on_attach = u.on_attach;
+-- }
