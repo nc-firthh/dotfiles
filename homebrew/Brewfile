@@ -9,6 +9,8 @@ brew "gpg"
 
 # Vim dependencies
 brew "vim"
+brew "tree-sitter", args: ["HEAD"]
+brew "luajit", args: ["HEAD"]
 brew "neovim", args: ["HEAD"]
 brew "fzf"
 brew "ripgrep"
