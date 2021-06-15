@@ -18,7 +18,7 @@ u.cmd('hi GruvboxOrangeSign     ctermfg=208 ctermbg=NONE')
 
 -- Telescope deps and config
 u.remap('<C-p>', ':Telescope find_files find_command=rg,--ignore,--hidden,--files<cr>')
-u.remap('<C-f>', ':Telescope live_grep find_command=rg,-e<cr>')
+u.remap('<C-f>', ':Telescope live_grep<cr>')
 
 require('telescope').setup({
 	defaults = {
