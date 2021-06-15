@@ -11,10 +11,11 @@ return require('packer').startup(function()
 	use 'MaxMEllon/vim-jsx-pretty'
 	use 'ElmCast/elm-vim'
 
-	-- Telescope deps and config
-	use 'nvim-lua/popup.nvim'
-	use 'nvim-lua/plenary.nvim'
-	use 'nvim-telescope/telescope.nvim'
+	-- Telescope and deps
+	use {
+		'nvim-telescope/telescope.nvim',
+		requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+	}
 
 	-- Ranger
 	use 'francoiscabrol/ranger.vim'
@@ -35,5 +36,4 @@ return require('packer').startup(function()
 
 	-- Speedy Stylish GitGutter
 	use 'airblade/vim-gitgutter'
-
 end)
