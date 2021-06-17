@@ -23,7 +23,17 @@ u.remap('<C-f>', ':Telescope live_grep<cr>')
 require('telescope').setup({
 	defaults = {
 		file_sorter =  require'telescope.sorters'.get_fzy_sorter,
-	}
+	},
+})
+
+-- Lualine setup
+require('lualine').setup({
+	options = { theme = 'gruvbox_material' }
+})
+
+-- DevIcons setup
+require'nvim-web-devicons'.setup({
+	default = true;
 })
 
 -- Ranger & keybindings

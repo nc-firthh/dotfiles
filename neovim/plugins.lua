@@ -17,6 +17,13 @@ return require('packer').startup(function()
 		requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
 	}
 
+	-- Statusline
+	use {
+		'hoob3rt/lualine.nvim',
+		requires = {'kyazdani42/nvim-web-devicons', opt = true}
+	}
+
+
 	-- Ranger
 	use 'francoiscabrol/ranger.vim'
 	use 'rbgrouleff/bclose.vim'
