@@ -12,10 +12,15 @@ function move(x, y, w, h, p)
   local max = screen:frame()
   local aspectRatio = max.w / max.h
 
-  f.x = max.x + (max.w * x) + p * aspectRatio
-  f.y = max.y + (max.h * y) + p
-  f.w = max.w * w - (p * aspectRatio * 2)
-  f.h = max.h * h - (p * 2)
+  local xOffset = (x == 0) and 0 or p / 2
+  local yOffset = (y == 0) and 0 or p / 2
+  local wOffset = (w == 1) and 2 or 1.5
+  local hOffset = (h == 1) and 2 or 1.5
+
+  f.x = max.x + (max.w * x) + (p - xOffset) * aspectRatio
+  f.y = max.y + (max.h * y) + p - yOffset
+  f.w = max.w * w - (p * aspectRatio * wOffset)
+  f.h = max.h * h - (p * hOffset)
 
   win:setFrame(f)
 end
