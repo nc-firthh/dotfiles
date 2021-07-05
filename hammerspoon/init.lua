@@ -4,33 +4,39 @@ local defaultPadding = 8
 local defaultMash  = { 'ctrl', 'alt', 'cmd' }
 
 function move(x, y, w, h, p)
-  p = p or defaultPadding
+	p = p or defaultPadding
 
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local screen = win:screen()
-  local max = screen:frame()
-  local aspectRatio = max.w / max.h
+	local win = hs.window.focusedWindow()
+	local f = win:frame()
+	local screen = win:screen()
+	local max = screen:frame()
+	local aspectRatio = max.w / max.h
 
-  local xOffset = (x == 0) and 0 or p / 2
-  local yOffset = (y == 0) and 0 or p / 2
-  local wOffset = (w == 1) and 2 or 1.5
-  local hOffset = (h == 1) and 2 or 1.5
+	local xOffset = (x == 0) and 0 or p / 2
+	local yOffset = (y == 0) and 0 or p / 2
+	local wOffset = (w == 1) and 2 or 1.5
+	local hOffset = (h == 1) and 2 or 1.5
 
-  f.x = max.x + (max.w * x) + (p - xOffset) * aspectRatio
-  f.y = max.y + (max.h * y) + p - yOffset
-  f.w = max.w * w - (p * aspectRatio * wOffset)
-  f.h = max.h * h - (p * hOffset)
+	f.x = max.x + (max.w * x) + (p - xOffset)
+	f.y = max.y + (max.h * y) + (p - yOffset)
+	f.w = max.w * w - (p * wOffset)
+	f.h = max.h * h - (p * hOffset)
 
-  win:setFrame(f)
+	-- If calling `center`...
+	if (p > defaultPadding) then
+		f.w = f.w - (p * aspectRatio) * 2
+		f.x = f.x + (p * aspectRatio)
+	end
+
+	win:setFrame(f)
 end
 
 function bindHotkey(key, func, mash)
-  mash = mash or defaultMash
-  hs.hotkey.bind(mash, key, func)
+	mash = mash or defaultMash
+	hs.hotkey.bind(mash, key, func)
 end
 
-function center()        move(0.0, 0.0, 1.0, 1.0, 64) end
+function center()        move(0.0, 0.0, 1.0, 1.0, 84) end
 function fill()          move(0.0, 0.0, 1.0, 1.0) end
 function top50()         move(0.0, 0.0, 1.0, 0.5) end
 function left60()        move(0.0, 0.0, 0.58, 1.0) end
@@ -67,4 +73,3 @@ bindHotkey("5", topLeft40)
 bindHotkey("6", topRight40)
 bindHotkey("7", bottomRight40)
 bindHotkey("8", bottomLeft40)
-
