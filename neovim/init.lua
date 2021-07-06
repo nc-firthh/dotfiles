@@ -59,7 +59,7 @@ require'nvim-web-devicons'.setup({
 u.remap('<C-b>', ':Ranger<cr>')
 
 -- Autocompletion
-vim.o.completeopt = "menuone,noselect"
+vim.o.completeopt = "menuone,noinsert,noselect"
 
 require('compe').setup({
 	enabled = true,
@@ -69,6 +69,10 @@ require('compe').setup({
 		nvim_lsp = true,
 	},
 })
+
+u.cmd('let g:completion_enable_snippet = \'Ultisnips\'')
+u.cmd('inoremap <expr> <Tab>   pumvisible() ? "\\<C-n>" : "\\<Tab>"')
+u.cmd('inoremap <expr> <S-Tab> pumvisible() ? "\\<C-p>" : "\\<S-Tab>"')
 
 -- Speedy Stylish GitGutter
 u.set_global('updatetime', 100)

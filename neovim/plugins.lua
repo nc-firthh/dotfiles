@@ -10,6 +10,7 @@ return require('packer').startup(function()
 	use 'pangloss/vim-javascript'
 	use 'MaxMEllon/vim-jsx-pretty'
 	use 'ElmCast/elm-vim'
+	use 'hashivim/vim-terraform'
 
 	-- Telescope and deps
 	use {
@@ -34,6 +35,14 @@ return require('packer').startup(function()
 
 	-- Autocompletion
 	use 'hrsh7th/nvim-compe'
+	use 'nvim-lua/completion-nvim'
+
+	-- Snippets
+	use 'SirVer/ultisnips'
+	use 'honza/vim-snippets'
+
+	-- Treesitter
+	use 'nvim-treesitter/nvim-treesitter'
 
 	-- Tpope goodness
 	use 'tpope/vim-fugitive'
