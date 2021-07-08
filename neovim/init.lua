@@ -32,7 +32,16 @@ require('telescope').setup({
 			'--column',
 			'--smart-case',
 			'--hidden'
-		}
+		},
+		layout_strategy = "flex",
+		layout_config = {
+			flex = {
+				flip_columns = 160,
+				horizontal = {
+					preview_width = 0.58,
+				},
+			},
+		},
 	},
 })
 
